@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COUNTRY SEARCH FILTER</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="app.js" defer></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Country Details</h1>
+
+        <div class="search-box">
+            <input type="text" id="search-input" placeholder="Search by country name..." oninput="filterCountries()">
+        </div>
+
+        <div class="filter-box">
+            <label for="region-select">Filter by region:</label>
+            <select id="region-select" onchange="filterCountries()">
+                <option value="all">All</option>
+                <option value="Africa">Africa</option>
+                <option value="Americas">Americas</option>
+                <option value="Asia">Asia</option>
+                <option value="Europe">Europe</option>
+                <option value="Oceania">Oceania</option>
+            </select>
+        </div>
+
+        <div id="countries-grid" class="countries-grid">
+        </div>
+
+    </div>
+
+</body>
+</html>
